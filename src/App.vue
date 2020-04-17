@@ -5,7 +5,7 @@
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">My Title</span>
+        <span class="md-title">{{Title}}</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible">
@@ -57,9 +57,20 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  data: () => ({
+    menuVisible: false,
+    Title: "Covid 19 PWA dashboard for India"
+  })
 };
 </script>
 
-<style>
+<style scoped>
+.md-app {
+  border: 1px solid rgba(#000, 0.12);
+}
+.md-drawer {
+  width: 230px;
+  max-width: calc(100vw - 125px);
+}
 </style>
