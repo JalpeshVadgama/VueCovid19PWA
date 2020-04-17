@@ -13,23 +13,18 @@
 
         <md-list>
           <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
+            <md-icon>home</md-icon>
+            <span class="md-list-item-text">Home</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">Sent Mail</span>
+            <md-icon style="font-weight:bold !important">trending_up</md-icon>
+            <span class="md-list-item-text">State Wise Statistics</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
+            <md-icon>info</md-icon>
+            <span class="md-list-item-text">About Us</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
@@ -60,7 +55,7 @@ export default {
   name: "app",
   data: () => ({
     menuVisible: false,
-    Title: "Covid 19 PWA dashboard for India"
+    Title: "Covid 19 Statewise dashboard india"
   })
 };
 </script>
