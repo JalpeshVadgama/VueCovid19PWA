@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="text-align: center;">
     <md-card class="red" md-with-hover>
       <md-ripple>
         <md-card-header>
@@ -20,7 +20,7 @@
     <md-card class="green" md-with-hover>
       <md-ripple>
         <md-card-header>
-          <div class="md-title">Total death</div>
+          <div class="md-title">Total recovered</div>
         </md-card-header>
 
         <md-card-content></md-card-content>
@@ -29,7 +29,7 @@
     <md-card class="grey" md-with-hover>
       <md-ripple>
         <md-card-header>
-          <div class="md-title">Total recovered</div>
+          <div class="md-title">Total death</div>
         </md-card-header>
 
         <md-card-content></md-card-content>
@@ -60,7 +60,7 @@ export default {
   background: #ff073a !important;
 }
 .blue {
-  background: #007bff !important;
+  background: #0091ffe8 !important;
 }
 .green {
   background: rgba(40, 167, 69, 0.6) !important;
