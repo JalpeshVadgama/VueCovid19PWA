@@ -8,12 +8,12 @@ export default new vuex.Store({
     data: []
   },
   actions: {
-    loadData() {
+    loadData({ commit }) {
       axios
         .get("https://api.covid19india.org/data.json")
         .then(result => {
-          console.log(result);
-          this.commit('SET_DATA', result);
+          console.log(result.data.statewise);
+          commit('SET_DATA', result.data.statewise);
         })
         .catch(error => {
           console.log(error);
@@ -23,6 +23,14 @@ export default new vuex.Store({
   mutations: {
     SET_DATA(state, data) {
       state.data = data
+    }
+  },
+  getters: {
+    country: state => {
+      return state.data[0];
+    },
+    statewise: state => {
+      return state.data.shift();
     }
   }
 });

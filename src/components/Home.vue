@@ -5,7 +5,7 @@
         <md-card-header>
           <div class="md-title">Total confirmed cases</div>
         </md-card-header>
-        <md-card-content></md-card-content>
+        <md-card-content>{{this.country.confirmed}}</md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="blue" md-with-hover>
@@ -13,8 +13,7 @@
         <md-card-header>
           <div class="md-title">Total active cases</div>
         </md-card-header>
-
-        <md-card-content></md-card-content>
+        <md-card-content>{{this.country.active}}</md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="green" md-with-hover>
@@ -22,8 +21,7 @@
         <md-card-header>
           <div class="md-title">Total recovered</div>
         </md-card-header>
-
-        <md-card-content></md-card-content>
+        <md-card-content>{{this.country.recovered}}</md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="grey" md-with-hover>
@@ -32,18 +30,25 @@
           <div class="md-title">Total death</div>
         </md-card-header>
 
-        <md-card-content></md-card-content>
+        <md-card-content>{{this.country.deaths}}</md-card-content>
       </md-ripple>
     </md-card>
   </div>
 </template>
 
 <script>
+import store from "./../Store/store";
 export default {
   name: "Home",
-  data() {
-    return {};
-  }
+  data: () => ({
+    country: {
+      confirmed: 0,
+      deaths: 0,
+      recovered: 0,
+      active: 0
+    }
+  }),
+  mounted() {}
 };
 </script>
 
