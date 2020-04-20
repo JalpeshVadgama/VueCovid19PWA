@@ -46,7 +46,6 @@
 
 <script>
 import store from "./Store/store";
-import { mapState } from "vuex";
 export default {
   name: "app",
   data: () => ({

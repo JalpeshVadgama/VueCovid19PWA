@@ -5,7 +5,9 @@
         <md-card-header>
           <div class="md-title">Total confirmed cases</div>
         </md-card-header>
-        <md-card-content>{{this.country.confirmed}}</md-card-content>
+        <md-card-content>
+          <span v-if="this.country">{{this.country.confirmed}}</span>
+        </md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="blue" md-with-hover>
@@ -13,7 +15,9 @@
         <md-card-header>
           <div class="md-title">Total active cases</div>
         </md-card-header>
-        <md-card-content>{{this.country.active}}</md-card-content>
+        <md-card-content>
+          <span v-if="this.country">{{this.country.active}}</span>
+        </md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="green" md-with-hover>
@@ -21,7 +25,9 @@
         <md-card-header>
           <div class="md-title">Total recovered</div>
         </md-card-header>
-        <md-card-content>{{this.country.recovered}}</md-card-content>
+        <md-card-content>
+          <span v-if="this.country">{{this.country.recovered}}</span>
+        </md-card-content>
       </md-ripple>
     </md-card>
     <md-card class="grey" md-with-hover>
@@ -30,10 +36,11 @@
           <div class="md-title">Total death</div>
         </md-card-header>
 
-        <md-card-content>{{this.country.deaths}}</md-card-content>
+        <md-card-content>
+          <span v-if="this.country">{{this.country.deaths}}</span>
+        </md-card-content>
       </md-ripple>
     </md-card>
-    {{this.stateWise}}
   </div>
 </template>
 
@@ -43,7 +50,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "Home",
   computed: {
-    ...mapGetters(["country", "stateWise"])
+    ...mapGetters(["country", "statecases"])
   }
 };
 </script>
@@ -56,6 +63,13 @@ export default {
   display: inline-block;
   vertical-align: top;
   color: white !important;
+}
+.md-card-content {
+  font-size: 20px !important;
+  font-style: italic;
+}
+.md-card-header {
+  font-size: 30px;
 }
 .red {
   background: #ff073a !important;

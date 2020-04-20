@@ -29,7 +29,7 @@ export default new vuex.Store({
     country: state => {
       return state.cases[0];
     },
-    statewise: state => {
+    statecases: state => {
       return state.cases.shift();
     }
   }
