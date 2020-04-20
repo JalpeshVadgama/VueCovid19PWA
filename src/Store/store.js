@@ -30,7 +30,8 @@ export default new vuex.Store({
       return state.cases[0];
     },
     statecases: state => {
-      return state.cases.shift();
+      var array = state.cases.slice(1);
+      return array;
     }
   }
 });
