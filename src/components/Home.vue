@@ -33,30 +33,17 @@
         <md-card-content>{{this.country.deaths}}</md-card-content>
       </md-ripple>
     </md-card>
+    {{this.stateWise}}
   </div>
 </template>
 
 <script>
 import store from "./../Store/store";
+import { mapGetters } from "vuex";
 export default {
   name: "Home",
-  data: () => ({
-    country: {
-      confirmed: 0,
-      deaths: 0,
-      recovered: 0
-    }
-  }),
-  async mounted() {
-    var promise = this.$store.dispatch("getData");
-    promise
-      .then(result => {
-        console.log("then");
-        console.log(result);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+  computed: {
+    ...mapGetters(["country", "stateWise"])
   }
 };
 </script>

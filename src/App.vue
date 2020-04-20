@@ -53,7 +53,7 @@ export default {
     menuVisible: false,
     Title: "Covid 19 India Dashboard"
   }),
-  mounted() {
+  created() {
     this.$store.dispatch("loadData");
   }
 };

@@ -5,7 +5,7 @@ import vuex from "vuex";
 Vue.use(vuex, axios);
 export default new vuex.Store({
   state: {
-    data: []
+    cases: []
   },
   actions: {
     loadData({ commit }) {
@@ -18,22 +18,19 @@ export default new vuex.Store({
         .catch(error => {
           console.log(error);
         });
-    },
-    getData() {
-      return this.state.data;
     }
   },
   mutations: {
     SET_DATA(state, data) {
-      state.data = data
+      state.cases = data;
     }
   },
   getters: {
     country: state => {
-      return state.data[0];
+      return state.cases[0];
     },
     statewise: state => {
-      return state.data.shift();
+      return state.cases.shift();
     }
   }
 });
