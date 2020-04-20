@@ -12,12 +12,15 @@ export default new vuex.Store({
       axios
         .get("https://api.covid19india.org/data.json")
         .then(result => {
-          console.log(result.data.statewise);
+          // console.log(result.data.statewise);
           commit('SET_DATA', result.data.statewise);
         })
         .catch(error => {
           console.log(error);
         });
+    },
+    getData() {
+      return this.state.data;
     }
   },
   mutations: {

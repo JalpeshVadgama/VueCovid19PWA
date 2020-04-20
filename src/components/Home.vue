@@ -44,11 +44,20 @@ export default {
     country: {
       confirmed: 0,
       deaths: 0,
-      recovered: 0,
-      active: 0
+      recovered: 0
     }
   }),
-  mounted() {}
+  async mounted() {
+    var promise = this.$store.dispatch("getData");
+    promise
+      .then(result => {
+        console.log("then");
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 };
 </script>
 
