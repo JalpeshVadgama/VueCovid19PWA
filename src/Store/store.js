@@ -32,6 +32,9 @@ export default new vuex.Store({
     statecases: state => {
       var array = state.cases.slice(1);
       return array;
+    },
+    isloaded: state => {
+      return !!state.cases.length;
     }
   }
 });
