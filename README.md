@@ -6,11 +6,11 @@
 ## Technology used in this project
 
 
-  --- Vue.js
-  --- Vuex
-  --- Vue Material
-  --- Axios
-  --- Open source data api from https://www.covid19india.org/
+  * Vue.js
+  * Vuex
+  * Vue Material
+  * Axios
+  * Open source data api from https://www.covid19india.org/
 
 
 ## Build Setup
