@@ -2,6 +2,17 @@
 
 > A covid 19(Corona) Virus Progressive Web Application for build with Vue.js, Vuex and Axios.
 
+
+## Technology used in this project
+
+
+  --- Vue.js
+  --- Vuex
+  --- Vue Material
+  --- Axios
+  --- Open source data api from https://www.covid19india.org/
+
+
 ## Build Setup
 
 ``` bash
