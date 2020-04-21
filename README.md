@@ -1,6 +1,6 @@
 # covid19pwa
 
-> A dashboard pwa for creting application with vue.js
+> A covid 19(Corona) Virus Progressive Web Application for build with Vue.js, Vuex and Axios.
 
 ## Build Setup
 
