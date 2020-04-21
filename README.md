@@ -1,6 +1,6 @@
 # covid19pwa
 
-> A covid 19(Corona) Virus Progressive Web Application for build with Vue.js, Vuex and Axios.
+> A covid 19(Corona) Virus tracker Progressive Web Application for build with Vue.js, Vuex and Axios.
 
 
 ## Technology used in this project
